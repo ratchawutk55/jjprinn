@@ -1,3 +1,9 @@
-<p>
-  car-list works!
-</p>
+ 
+
+<div class="list-group">
+   
+  <a *ngFor="let car of cars" [routerLink]="['/car',car.id]" class="list-group-item list-group-item-action" >
+    {{ car.brand }}  {{ car.model}}
+  </a>
+ 
+</div>

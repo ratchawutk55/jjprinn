@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MockService } from 'src/app/service/mock.service';
 
 @Component({
   selector: 'app-car-list',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarListComponent implements OnInit {
 
-  constructor() { }
+  cars: Array<any>;
+  constructor(private service: MockService) { }
 
   ngOnInit() {
+    this.cars = this.service.getMock();
   }
 
 }
